@@ -1,0 +1,136 @@
+2023-08-09 18:08:43.002 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-08-09 18:08:43.070 [restartedMain] INFO  c.e.Contacts.ContactsApplication - Starting ContactsApplication using Java 20.0.2 with PID 2584 (C:\Users\Sainath.a\Desktop\SpringProjectFiles\Contacts\Contacts\target\classes started by sainath.a in C:\Users\Sainath.a\Desktop\SpringProjectFiles\Contacts\Contacts)
+2023-08-09 18:08:43.071 [restartedMain] DEBUG c.e.Contacts.ContactsApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-08-09 18:08:43.073 [restartedMain] INFO  c.e.Contacts.ContactsApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-09 18:08:43.154 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-09 18:08:43.157 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-09 18:08:44.726 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-09 18:08:44.856 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113 ms. Found 3 JPA repository interfaces.
+2023-08-09 18:08:46.032 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2023-08-09 18:08:46.050 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-09 18:08:46.052 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-09 18:08:46.053 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-08-09 18:08:46.171 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-09 18:08:46.171 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3013 ms
+2023-08-09 18:08:46.492 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-09 18:08:46.595 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-08-09 18:08:47.015 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-09 18:08:47.458 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e255fbd
+2023-08-09 18:08:47.462 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-09 18:08:47.576 [restartedMain] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-08-09 18:08:49.282 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-09 18:08:49.295 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 18:08:49.858 [restartedMain] DEBUG c.e.Contacts.filter.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2023-08-09 18:08:50.156 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-09 18:08:50.699 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f9ac591, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53215266, org.springframework.security.web.context.SecurityContextHolderFilter@1c616f1e, org.springframework.security.web.header.HeaderWriterFilter@3a8b770, org.springframework.web.filter.CorsFilter@4d5b756a, org.springframework.security.web.authentication.logout.LogoutFilter@e5ac2e2, com.example.Contacts.filter.JwtAuthFilter@562d5d5c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@303049f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7fa18d68, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1417352f, org.springframework.security.web.session.SessionManagementFilter@3a9d1d10, org.springframework.security.web.access.ExceptionTranslationFilter@7e191b6f, org.springframework.security.web.access.intercept.AuthorizationFilter@2aaccb77]
+2023-08-09 18:08:51.092 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-09 18:08:51.108 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-09 18:08:51.139 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-09 18:08:51.151 [restartedMain] INFO  c.e.Contacts.ContactsApplication - Started ContactsApplication in 8.62 seconds (process running for 9.672)
+2023-08-09 18:09:28.623 [http-nio-8085-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-09 18:09:28.628 [http-nio-8085-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-09 18:09:28.632 [http-nio-8085-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-08-09 18:09:29.237 [http-nio-8085-exec-2] WARN  c.e.C.services.ContactServices - User already exists
+2023-08-09 18:11:31.016 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 18:11:31.023 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-09 18:11:31.042 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-09 18:11:38.395 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-08-09 18:11:38.467 [restartedMain] INFO  c.e.Contacts.ContactsApplication - Starting ContactsApplication using Java 20.0.2 with PID 3376 (C:\Users\Sainath.a\Desktop\SpringProjectFiles\Contacts\Contacts\target\classes started by sainath.a in C:\Users\Sainath.a\Desktop\SpringProjectFiles\Contacts\Contacts)
+2023-08-09 18:11:38.468 [restartedMain] DEBUG c.e.Contacts.ContactsApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-08-09 18:11:38.469 [restartedMain] INFO  c.e.Contacts.ContactsApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-09 18:11:38.543 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-09 18:11:38.543 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-09 18:11:39.833 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-09 18:11:39.993 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 3 JPA repository interfaces.
+2023-08-09 18:11:41.178 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2023-08-09 18:11:41.193 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-09 18:11:41.195 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-09 18:11:41.195 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-08-09 18:11:41.270 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-09 18:11:41.270 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2726 ms
+2023-08-09 18:11:41.540 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-09 18:11:41.637 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-08-09 18:11:42.022 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-09 18:11:42.600 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45d9c582
+2023-08-09 18:11:42.606 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-09 18:11:42.740 [restartedMain] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-08-09 18:11:44.338 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-09 18:11:44.353 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 18:11:44.864 [restartedMain] DEBUG c.e.Contacts.filter.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2023-08-09 18:11:45.083 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-09 18:11:45.544 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3810e44d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6380a7c9, org.springframework.security.web.context.SecurityContextHolderFilter@71bbe822, org.springframework.security.web.header.HeaderWriterFilter@489fca01, org.springframework.web.filter.CorsFilter@3bcce377, org.springframework.security.web.authentication.logout.LogoutFilter@6b712b58, com.example.Contacts.filter.JwtAuthFilter@6e2ad4c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e85a8c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45456fda, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a25dcd2, org.springframework.security.web.session.SessionManagementFilter@49ee55c2, org.springframework.security.web.access.ExceptionTranslationFilter@7b93b438, org.springframework.security.web.access.intercept.AuthorizationFilter@61774789]
+2023-08-09 18:11:45.901 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-09 18:11:45.922 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-09 18:11:45.953 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-09 18:11:45.965 [restartedMain] INFO  c.e.Contacts.ContactsApplication - Started ContactsApplication in 8.028 seconds (process running for 9.116)
+2023-08-09 18:11:55.214 [http-nio-8085-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-09 18:11:55.216 [http-nio-8085-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-09 18:11:55.219 [http-nio-8085-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-08-09 18:11:55.830 [http-nio-8085-exec-2] WARN  c.e.C.services.ContactServices - User already exists
+2023-08-09 18:32:42.142 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 18:32:42.149 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-09 18:32:42.165 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-09 18:32:48.654 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-08-09 18:32:48.729 [restartedMain] INFO  c.e.Contacts.ContactsApplication - Starting ContactsApplication using Java 20.0.2 with PID 5756 (C:\Users\Sainath.a\Desktop\SpringProjectFiles\Contacts\Contacts\target\classes started by sainath.a in C:\Users\Sainath.a\Desktop\SpringProjectFiles\Contacts\Contacts)
+2023-08-09 18:32:48.730 [restartedMain] DEBUG c.e.Contacts.ContactsApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-08-09 18:32:48.731 [restartedMain] INFO  c.e.Contacts.ContactsApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-09 18:32:48.805 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-09 18:32:48.805 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-09 18:32:49.879 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-09 18:32:49.975 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 3 JPA repository interfaces.
+2023-08-09 18:32:51.008 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2023-08-09 18:32:51.022 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-09 18:32:51.023 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-09 18:32:51.023 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-08-09 18:32:51.121 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-09 18:32:51.122 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2316 ms
+2023-08-09 18:32:51.335 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-09 18:32:51.408 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-08-09 18:32:51.746 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-09 18:32:52.090 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b6bb4e3
+2023-08-09 18:32:52.092 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-09 18:32:52.159 [restartedMain] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-08-09 18:32:53.167 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-09 18:32:53.176 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 18:32:53.604 [restartedMain] DEBUG c.e.Contacts.filter.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2023-08-09 18:32:53.811 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-09 18:32:54.175 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@130dee0c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62650a08, org.springframework.security.web.context.SecurityContextHolderFilter@48af2673, org.springframework.security.web.header.HeaderWriterFilter@207d1fc7, org.springframework.web.filter.CorsFilter@55b8c128, org.springframework.security.web.authentication.logout.LogoutFilter@35ae8c58, com.example.Contacts.filter.JwtAuthFilter@2c51f31e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@337d26dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7dd7b126, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c9620da, org.springframework.security.web.session.SessionManagementFilter@6b074bee, org.springframework.security.web.access.ExceptionTranslationFilter@61b5acd5, org.springframework.security.web.access.intercept.AuthorizationFilter@5ce5bf8a]
+2023-08-09 18:32:54.506 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-09 18:32:54.527 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-09 18:32:54.557 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-09 18:32:54.570 [restartedMain] INFO  c.e.Contacts.ContactsApplication - Started ContactsApplication in 6.327 seconds (process running for 7.419)
+2023-08-09 18:34:55.844 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 18:34:55.849 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-09 18:34:55.858 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-09 18:35:02.771 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-08-09 18:35:02.843 [restartedMain] INFO  c.e.Contacts.ContactsApplication - Starting ContactsApplication using Java 20.0.2 with PID 19080 (C:\Users\Sainath.a\Desktop\SpringProjectFiles\Contacts\Contacts\target\classes started by sainath.a in C:\Users\Sainath.a\Desktop\SpringProjectFiles\Contacts\Contacts)
+2023-08-09 18:35:02.844 [restartedMain] DEBUG c.e.Contacts.ContactsApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-08-09 18:35:02.845 [restartedMain] INFO  c.e.Contacts.ContactsApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-09 18:35:02.923 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-09 18:35:02.924 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-09 18:35:04.057 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-09 18:35:04.155 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 3 JPA repository interfaces.
+2023-08-09 18:35:05.196 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2023-08-09 18:35:05.212 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-09 18:35:05.213 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-09 18:35:05.213 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-08-09 18:35:05.301 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-09 18:35:05.302 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2377 ms
+2023-08-09 18:35:05.527 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-09 18:35:05.590 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-08-09 18:35:05.942 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-09 18:35:06.298 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@85909a0
+2023-08-09 18:35:06.301 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-09 18:35:06.370 [restartedMain] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-08-09 18:35:07.411 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-09 18:35:07.421 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 18:35:07.793 [restartedMain] DEBUG c.e.Contacts.filter.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2023-08-09 18:35:07.999 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-09 18:35:08.367 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d77af25, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6726058e, org.springframework.security.web.context.SecurityContextHolderFilter@51056041, org.springframework.security.web.header.HeaderWriterFilter@6b3eda4b, org.springframework.web.filter.CorsFilter@792d154c, org.springframework.security.web.authentication.logout.LogoutFilter@414f9a59, com.example.Contacts.filter.JwtAuthFilter@589dbc8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bdedd24, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34aff290, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ef4504, org.springframework.security.web.session.SessionManagementFilter@73252de7, org.springframework.security.web.access.ExceptionTranslationFilter@36aa24b3, org.springframework.security.web.access.intercept.AuthorizationFilter@77f9a25f]
+2023-08-09 18:35:08.737 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-09 18:35:08.757 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-09 18:35:08.787 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-09 18:35:08.802 [restartedMain] INFO  c.e.Contacts.ContactsApplication - Started ContactsApplication in 6.451 seconds (process running for 7.394)
+2023-08-09 18:42:15.626 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 18:42:15.636 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-09 18:42:15.646 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

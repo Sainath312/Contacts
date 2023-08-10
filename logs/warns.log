@@ -1,0 +1,2 @@
+2023-08-10 10:23:10.988 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-10 10:23:17.092 [http-nio-8085-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.Contacts.exceptions.ContactNotFound: not found]
