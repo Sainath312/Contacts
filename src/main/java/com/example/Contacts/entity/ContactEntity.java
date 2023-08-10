@@ -43,10 +43,10 @@ public class ContactEntity {
         return updatedAt;
     }
 
-//    @PreUpdate
-//    public void onUpdate(){
-//        updatedAt = new Date();
-//    }
+    @PreUpdate
+    public void onUpdate(){
+        updatedAt = new Date();
+    }
 
     public long getContactId() {
         return contactId;
