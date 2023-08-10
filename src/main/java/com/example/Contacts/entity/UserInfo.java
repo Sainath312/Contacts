@@ -15,25 +15,39 @@ public class UserInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
 
-    public String userName;
-    public String passKey;
+    public String uname;
+    public String pwd;
     public String role;
 
-
-    public String getUserName() {
-        return userName;
+    public long getId() {
+        return id;
     }
 
-    public String getPassKey() {
-        return passKey;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public void setPassKey(String passKey) {
-        this.passKey = passKey;
+    public String getUname() {
+        return uname;
+    }
+
+    public void setUname(String uname) {
+        this.uname = uname;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
     public String getRole() {
         return role;
     }
 
+    public void setRole(String role) {
+        this.role = role;
+    }
 }

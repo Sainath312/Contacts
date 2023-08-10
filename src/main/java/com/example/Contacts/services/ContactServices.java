@@ -72,10 +72,10 @@ public class ContactServices implements ContactService {
     public ResponseEntity<String> addUserAndAdmin(UserInfo userInfo) {
         List<UserInfo> userList = repository.findAll();
         for (UserInfo user : userList) {
-            flag = user.getUserName().equals(userInfo.getUserName());
+            flag = user.getUname().equals(userInfo.getUname());
         }
         if(!flag) {
-            userInfo.setPassKey(passwordEncoder.encode(userInfo.getPassKey()));
+            userInfo.setPwd(passwordEncoder.encode(userInfo.getPwd()));
             repository.save(userInfo);
             logger.info("User Saved successfully");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Content-Type","application/json").body("{\"message\": \"User Saved\"}");
