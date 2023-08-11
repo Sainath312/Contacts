@@ -31,11 +31,11 @@ public class ExceptionHandler {
         ExceptionModel ex = new ExceptionModel(HttpStatus.NOT_FOUND.toString(), exception.getMessage(), res.getDescription(false));
         return new ResponseEntity<Object>(ex, HttpStatus.NOT_FOUND);
     }
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+
     @org.springframework.web.bind.annotation.ExceptionHandler({UserAlreadyExists.class})
     public ResponseEntity<Object> handleUserAlreadyExists(Exception exception, WebRequest res) {
-        ExceptionModel ex = new ExceptionModel(HttpStatus.BAD_REQUEST.toString(), exception.getMessage(), res.getDescription(false));
-        return new ResponseEntity<Object>(ex, HttpStatus.BAD_REQUEST);
+        ExceptionModel ex = new ExceptionModel(HttpStatus.OK.toString(), exception.getMessage(), res.getDescription(false));
+        return new ResponseEntity<Object>(ex, HttpStatus.OK);
     }
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @org.springframework.web.bind.annotation.ExceptionHandler({ContactNotUpdated.class})

@@ -1,9 +1,10 @@
 package com.example.Contacts.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import lombok.*;
 
 @Entity
 @Data
@@ -15,39 +16,39 @@ public class UserInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
 
-    public String uname;
-    public String pwd;
+    public String name;
+    @NotBlank
+    @Pattern(regexp ="^[7-9]\\d{9}$",message = "Enter Valid Indian PhoneNumber")
+    @Column(unique = true)
+    public String phoneNumber;
+    @NotBlank
+    @Email(message = "enter Valid Email")
+    @Column(unique = true)
+    public String emailID;
+    @NotBlank(message = "Enter Valid Password")
+    public String password;
+    @NotBlank(message = "Enter Valid Role")
     public String role;
 
-    public long getId() {
-        return id;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public String getEmailID() {
+        return emailID;
     }
 
-    public String getUname() {
-        return uname;
+
+    public String getPassword() {
+        return password;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
-    }
-
-    public String getPwd() {
-        return pwd;
-    }
-
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getRole() {
         return role;
     }
 
-    public void setRole(String role) {
-        this.role = role;
-    }
 }

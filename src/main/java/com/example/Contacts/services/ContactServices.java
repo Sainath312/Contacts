@@ -1,7 +1,6 @@
 package com.example.Contacts.services;
 
 import com.example.Contacts.entity.ContactEntity;
-import com.example.Contacts.entity.NumberEntity;
 import com.example.Contacts.entity.UserInfo;
 import com.example.Contacts.exceptions.ContactNotFound;
 import com.example.Contacts.exceptions.UserAlreadyExists;
@@ -43,42 +42,37 @@ public class ContactServices implements ContactService {
         return contentRepo.findAll(sort);
     }
 
-    public ResponseEntity<String> findContactById(Long id) {
+    public ResponseEntity<ContactEntity> findContactById(Long id) {
         ContactEntity user = contentRepo.findById(id).orElseThrow(() -> new ContactNotFound("not found"));
-        logger.info("User is found: " + user.getContactId());
-        StringBuilder response = new StringBuilder("Contact ID: " + user.getContactId() + "\n" +
-                "First Name: " + user.getFirstName() + "\n" +
-                "Last Name: " + user.getLastName() + "\n" +
-                "Phone Numbers:" + "\n");
-            for (NumberEntity phoneNumber : user.getPhoneNumber()) {
-                response.append("   Number: ").append(phoneNumber.getPhoneNumber()).append(", Type: ").append(phoneNumber.getType()).append("\n");
-            }
-            response.append("Email: ").append(user.getEmailId()).append("\n");
-            return ResponseEntity.ok().header("Content-type", "application/json").body(response.toString());
-        }
+        return ResponseEntity.ok(user);
+    }
 
-    public ResponseEntity<String> updateContact(ContactEntity contact, Long id) {
+    public ResponseEntity<ContactEntity> updateContact(ContactEntity contact, Long id) {
         ContactEntity user = contentRepo.findById(id).orElseThrow(() -> new ContactNotFound("not found"));
         logger.info("Contact Id : "+contact.getContactId()+" is Found");
         user.setFirstName(contact.getFirstName());
         user.setLastName(contact.getLastName());
         user.setEmailId(contact.getEmailId());
         user.setPhoneNumber(contact.getPhoneNumber());
-        contentRepo.save(user);
+        ContactEntity updatedContact = contentRepo.save(user);
         logger.info("New Contact Is Updated");
-        return ResponseEntity.ok().header("Content-type", "application/json").body(user.toString());
-    }
+        return ResponseEntity.status(HttpStatus.OK)
+                .header("Content-type", "application/json")
+                .body(updatedContact);
+        }
 
     public ResponseEntity<String> addUserAndAdmin(UserInfo userInfo) {
         List<UserInfo> userList = repository.findAll();
         for (UserInfo user : userList) {
-            flag = user.getUname().equals(userInfo.getUname());
+            flag = (user.getEmailID().equals(userInfo.getEmailID())||(user.getPhoneNumber().equals(userInfo.getPhoneNumber())));
         }
         if(!flag) {
-            userInfo.setPwd(passwordEncoder.encode(userInfo.getPwd()));
+            userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
             repository.save(userInfo);
             logger.info("User Saved successfully");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Content-Type","application/json").body("{\"message\": \"User Saved\"}");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .header("Content-Type","application/json")
+                    .body("{\"message\": \"User Saved\"}");
         }
         logger.warn("User already exists");
         throw new UserAlreadyExists("User already exists");
@@ -86,19 +80,17 @@ public class ContactServices implements ContactService {
 
     public ResponseEntity<String> getContactStatusById(Long id) {
         ContactEntity user = contentRepo.findById(id).orElseThrow(() -> new ContactNotFound("not found"));
-        logger.info("Contact Id :"+user.getContactId()+" is Found");
+        logger.info("Contact Id :" + user.getContactId() + " is Found");
         Date lastUpdatedTime = user.getUpdatedAt();
         if (lastUpdatedTime != null) {
-            logger.info("Phone Number Is Updated at time " + lastUpdatedTime);
-            return ResponseEntity.status(HttpStatus.FOUND)
+            return ResponseEntity.status(HttpStatus.OK)
                     .header("Content-Type", "application/json")
-                    .body("Contact was last updated on: \": " + lastUpdatedTime );
-        } else {
-            logger.info("Phone Number is not Updated");
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .header("Content-Type", "application/json")
-                    .body("{\"message\": \"Contact found but not updated yet.\"}");
+                    .body("{\"Updated Date \": \""+lastUpdatedTime+"\"}");
         }
+        String response="Contact Id :" + user.getContactId() + " is not Updated";
+        return ResponseEntity.status(HttpStatus.OK)
+                .header("Content-Type", "application/json")
+                .body("{\"Updated Date \": \""+response+"\"}");
     }
 
 }

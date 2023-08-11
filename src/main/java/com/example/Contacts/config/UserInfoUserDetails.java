@@ -16,9 +16,20 @@ public class UserInfoUserDetails implements UserDetails {
     public List<GrantedAuthority> authorities;
 
     public UserInfoUserDetails(UserInfo userInfo) {
-    	username=userInfo.getUname();
-        password=userInfo.getPwd();
+    	username=userInfo.getEmailID();
+        password=userInfo.getPassword();
         authorities= Arrays.stream(userInfo.getRole().split(","))
+                .map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
+    }
+    public UserInfoUserDetails(UserInfo userInfo, boolean useMobileAsUsername) {
+        if (useMobileAsUsername) {
+            this.username = userInfo.getPhoneNumber();
+        } else {
+            this.username = userInfo.getEmailID();
+        }
+        this.password = userInfo.getPassword();
+        this.authorities = Arrays.stream(userInfo.getRole().split(","))
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
     }

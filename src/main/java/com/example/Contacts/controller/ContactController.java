@@ -33,7 +33,7 @@ public class ContactController {
     }
 
     @GetMapping("/listContacts")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public List<ContactEntity> listOfContact(){
         return services.listContents();
     }
@@ -45,27 +45,32 @@ public class ContactController {
 
     @GetMapping("/getByUser/{id}")
     @PreAuthorize("hasRole('ROLE_USER')")
-    public ResponseEntity<String> getByUserId(@PathVariable Long id){
+    public ResponseEntity<ContactEntity> getByUserId(@PathVariable Long id){
         return services.findContactById(id);
     }
+
     @PutMapping("contact/updateContact/{id}")
-    public ResponseEntity<String> updateContact(@RequestBody @Valid ContactEntity contact,@PathVariable Long id){
+    public ResponseEntity<ContactEntity> updateContact(@RequestBody @Valid ContactEntity contact,@PathVariable Long id){
         return services.updateContact(contact,id);
     }
+
     @PostMapping("/contact/new")
-    public ResponseEntity<String> addNewUser(@RequestBody UserInfo userInfo){
+    public ResponseEntity<String> addNewUser(@RequestBody @Valid UserInfo userInfo){
         return services.addUserAndAdmin(userInfo);
     }
+
     @PostMapping("/contact/authenticate")
-    public String getToken(@RequestBody AuthRequest authRequest) {
-        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
+    public ResponseEntity<String> getToken(@RequestBody AuthRequest authRequest) {
+        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(),authRequest.getPassword()));
         if (authentication.isAuthenticated()) {
-            return jwtService.generateToken(authRequest.getUsername());
+            String token = jwtService.generateToken(authRequest.getUsername());
+            return ResponseEntity.status(HttpStatus.OK).header("Content-Type", "application/json").body("{\"token\":\"" + token + "\"}");
         } else {
             throw new UsernameNotFoundException("Username " + authRequest.getUsername() + " not found");
         }
 
     }
+
     @GetMapping("/contact/getUpdateStatus/{id}")
     public ResponseEntity<String> getUpdateStatus(@PathVariable Long id){
         return services.getContactStatusById(id);

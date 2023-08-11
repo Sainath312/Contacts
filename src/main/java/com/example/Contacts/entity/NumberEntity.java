@@ -18,16 +18,9 @@ public class NumberEntity {
     public long id;
 
     @NotEmpty(message = "Mobile Number Is Mandatory")
-    @Pattern(regexp = "^\\d{10}$",message = "Enter Valid PhoneNumber")
+    @Pattern(regexp = "^[7-9]\\d{9}$",message = "Enter Valid PhoneNumber")
     public String phoneNumber;
     @NotEmpty(message = "Type Of Number Is Mandatory")
     public String type;
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public String getType() {
-        return type;
-    }
 }

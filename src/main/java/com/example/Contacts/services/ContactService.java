@@ -10,8 +10,8 @@ public interface ContactService {
     ContactEntity newContact(ContactEntity con);
     List<ContactEntity> listContents();
     List<ContactEntity> sortByUserFirstName();
-    ResponseEntity<String> findContactById(Long id);
-    ResponseEntity<String> updateContact(ContactEntity contact, Long id);
+    ResponseEntity<ContactEntity> findContactById(Long id);
+    ResponseEntity<ContactEntity> updateContact(ContactEntity contact, Long id);
     ResponseEntity<String> addUserAndAdmin(UserInfo userInfo);
     ResponseEntity<String> getContactStatusById(Long contactId);
 }
